@@ -1,1 +1,1 @@
-console.log('ssssss')
+import './modules/part-4/index.js'

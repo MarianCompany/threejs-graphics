@@ -5,9 +5,72 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>graphics</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #000;
+      }
+
+      #deltae-table-container {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+        background: rgba(30, 30, 30, 0.85);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        font-family: monospace;
+        z-index: 100;
+      }
+
+      #deltae-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      #deltae-table th,
+      #deltae-table td {
+        text-align: left;
+        padding: 6px;
+        border-bottom: 1px solid #555;
+      }
+
+      #deltae-table th:last-child,
+      #deltae-table td:last-child {
+        text-align: right;
+      }
+
+      #deltae-table td[colspan] {
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
+    <div id="deltae-table-container">
+      <h3>ΔE76 между парами цветов</h3>
+      <table id="deltae-table">
+        <thead>
+        <tr>
+          <th>Цвет 1</th>
+          <th>Цвет 2</th>
+          <th>ΔE76</th>
+        </tr>
+        </thead>
+        <tbody id="deltae-table-body">
+        <tr>
+          <td colspan="3">Добавьте минимум два цвета</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
