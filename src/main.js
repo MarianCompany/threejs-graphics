@@ -1,2 +1,2 @@
 import './style.css'
-import './modules/part-2/index.js'
+import './modules/part-3/index.js'
